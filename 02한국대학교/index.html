@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +16,9 @@
 		.nav1st li:first-child a { height:40px; background:#fff; color:#6c6c6c; }
 		.nav1st li + li a { background:#00163b; height:40px; }
 		
+		.nav2st .m-icon { margin-top:12px; width:16px; height:16px; background:#fff; color:#f5f6fb; }
+		.nav2st .m-icon a { color:#9b9b9b;  text-align: center; line-height:13px;}
+		
 		
 		.nav2st { float:right; }
 		.nav2st li { float:left; margin-right:10px; }
@@ -29,8 +33,6 @@
 		.nav3st { float:left; }
 		.nav3st li { float:left; }
 		.nav3st li a { display:block; line-height:55px; margin-left:22px; }
-		
-		.icon { float:right; }
 		
 		
 
@@ -51,7 +53,12 @@
 				<div class="nav2st">
 					<ul class="clearfix">
 						<li><a href="#">글자크기</a></li>
-						<li><a href="#">-+</a></li>
+						<li>
+							<ul>
+								<li class="m-icon"><a href="#">-</a></li>
+								<li class="m-icon"><a href="#">+</a></li>
+							</ul>
+						</li>
 						<li><a href="#">찾아오시는길</a></li>
 						<li><a href="#">ENGLISH</a></li>
 						<li><a href="#">사이트맵</a></li>
@@ -70,19 +77,14 @@
 						<li><a href="#">학과소개</a></li>
 						<li><a href="#">학사안내</a></li>
 						<li><a href="#">대학생활</a></li>
-						<li><a href="#">학생지원센터1</a></li>
+						<li><a href="#">학생지원센터</a></li>
 						<a href=""><img src="images/icon01.png" alt=""></a>
 						<a href=""><img src="images/icon02.png" alt=""></a>
 					</ul>
 				</div>
-				<div class="nav4st">
-					<div class="icon clearfix">
-						<a href=""><img src="images/icon01.png" alt=""></a>
-						<a href=""><img src="images/icon02.png" alt=""></a>
-					</div>
-				</div>
 			</div>
 		</div>
 	</header>
+	
 </body>
 </html>
