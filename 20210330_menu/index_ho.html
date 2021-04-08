@@ -6,12 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="../css/reset.css">
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("nav.gnb>ul>li").hover(function(){
+        console.log( $(this).index() );
+        $(this).find(".submenu").show();
+      },function(){
+        $(this).find(".submenu").hide();
+      });
+    });
+  </script>
   <style>
     .submenu { display:none; }
     .gnb { width: 1000px; margin: 0 auto; background:orange; position: relative; }
     .gnb>ul>li { float:left; width:20%; }
     .gnb>ul>li>a { display:block; line-height:40px; text-align:center; }
-    .gnb>ul>li:hover .submenu{display:block; }
+    /*.gnb>ul>li:hover .submenu{display:block; }*/
 
     .submenu { position:absolute; background:#ffd98f; width:100%; left:0; }
     .submenu li { float:left; }
