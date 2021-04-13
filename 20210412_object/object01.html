@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p id="var1">정보1</p>
+  <p id="var2">정보2</p>
+  <p id="var3" class="view1">정보3</p>
+  <p id="var4" class="view1">정보4</p>
+  <script>
+    console.log ( document.getElementById("var1").innerHTML );
+    console.log ( document.getElementsByTagName("p")[0].innerHTML );
+    console.log ( document.getElementsByTagName("body")[0].innerHTML );
+
+    document.getElementById("var1").innerHTML = "변경1";
+    document.getElementsByTagName("p")[1].innerHTML = "변경2";
+    document.getElementsByTagName("body")[0].style.backgroundColor = "pink"
+    document.getElementsByClassName("view1")[0].innerHTML = "변경3"
+    document.getElementsByClassName("view1")[1].innerHTML = "변경4"
+
+    document.querySelectorAll(".view1")[0].style.backgroundColor = "#e35484";
+    document.querySelectorAll(".view1")[1].style.backgroundColor = "#f079a1";
+
+  function view(){
+    const view = document.querySelectorAll(".view1");
+
+    for( let i=0; i<view.length; i++ ){
+      view[i].style.border = "1px solid #fa0061"
+    }
+  }
+
+  </script>
+  <button onclick="view()">테두리변경</button>
+
+  <button onclick="btnView(1)">배경변경 빨강</button>
+  <button onclick="btnView(2)">배경변경 오렌지</button>
+<script>
+function btnView(x){
+    const bodyView = document.getElementsByTagName("body");
+    if(x==1){
+      bodyView[0].style.backgroundColor = "red";
+    }else{
+      bodyView[0].style.backgroundColor = "orange";
+    }
+  }
+</script>
+<button onclick="btn1()">배경변경 노랑</button>
+<script>
+function btn1(){
+   const btn1 = document.querySelectorAll("body");
+
+   btn1[0].style.backgroundColor = "yellow"
+ }
+</script>
+ <button onclick="btn2()">배경변경 그린</button>
+ <script>
+ function btn2(){
+   const btn2 = document.querySelectorAll("body");
+
+   btn2[0].style.backgroundColor = "green"
+ }
+ </script>
+</body>
+</html>
