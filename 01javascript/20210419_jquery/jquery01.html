@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="../../js/jquery-3.1.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      console.log( $("p").eq(1).css("background") );
+      $("p").eq(2).css("color","red");
+      document.getElementsByTagName("p")[3].style.color="blue";
+    });
+    </script>
+</head>
+<body>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam incidunt, magnam quos deserunt.
+    Distinctio nulla praesentium alias magni debitis dolorum asperiores unde,
+    nam nihil ipsum et expedita ipsam eius at.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam incidunt, magnam quos deserunt.
+    Distinctio nulla praesentium alias magni debitis dolorum asperiores unde,
+    nam nihil ipsum et expedita ipsam eius at.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam incidunt, magnam quos deserunt.
+    Distinctio nulla praesentium alias magni debitis dolorum asperiores unde,
+    nam nihil ipsum et expedita ipsam eius at.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam incidunt, magnam quos deserunt.
+    Distinctio nulla praesentium alias magni debitis dolorum asperiores unde,
+    nam nihil ipsum et expedita ipsam eius at.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam incidunt, magnam quos deserunt.
+    Distinctio nulla praesentium alias magni debitis dolorum asperiores unde,
+    nam nihil ipsum et expedita ipsam eius at.</p>
+
+    <ul class="tab">
+      <li>menu1</li>
+      <li>menu2</li>
+      <li>menu3</li>
+      <li>menu4</li>
+      <li>menu5</li>
+    </ul>
+    <div class="boxWrap">
+      <div class="box1">1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, voluptates!</div>
+      <div class="box2">2. Ab dolor, autem adipisci non, id maxime pariatur cupiditate voluptates?</div>
+      <div class="box3">3. Molestias officia temporibus architecto minima mollitia aut, harum adipisci veritatis.</div>
+      <div class="box4">4. Nesciunt illo, explicabo maiores tenetur earum tempore blanditiis minima eum?</div>
+      <div class="box5">5. Cum consequuntur veniam, tempore temporibus sit dolorum est eius, inventore?</div>
+    </div>
+    <script>
+      //$(".tab>li").on("click",function(){});
+      $(".boxWrap>div").hide();
+      $(".boxWrap>div").eq(0).show();
+      $(".tab>li").click(function(){
+        //$(".tab>li").eq(0).css("background","pink");
+        $(".tab>li").css("background","white");
+        $(this).css("background","pink");
+        console.log($(this).index());
+
+        $(".boxWrap>div").hide().eq($(this).index()).show();
+      });
+    </script>
+</body>
+</html>
