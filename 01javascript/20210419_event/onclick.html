@@ -9,8 +9,12 @@
     html,body { height:100%; }
   </style>
 </head>
+<<<<<<< HEAD
 <!-- <body onmousemove="where(event)"> -->
 <body>
+=======
+<body onmousemove="where(event)">
+>>>>>>> d82037324e32a80bf08b5c53992bddd5848b0952
   <script>
     function where(e){
       console.log("x값 : " + e.clientX + " y값 : " + e.clientY)
@@ -57,6 +61,7 @@
     obj.style.border = "1px solid lightgray";
   }
 
+<<<<<<< HEAD
     let width = 0;
   function wheel(e, obj){
     // console.log(e.wheelDelta)
@@ -70,6 +75,10 @@
     obj.style.borderStyle = "solid";
     obj.style.borderWidth = width + "px";
     // obj.style.borderWidth = `${width} px`;
+=======
+  function wheel(e,obj){
+    console.log(e.wheelDelta)
+>>>>>>> d82037324e32a80bf08b5c53992bddd5848b0952
   }
 </script>
 
