@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/fullpage.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#fullpage").fullpage({
+                menu:".topMenu",
+                anchors:['m1st','m2st','m3st','m4st'],
+                navigation:true,
+                navigationTooltips:['home','product','communite','board'],
+                showActiveTooltip:true,
+                responsiveWidth: 1000,
+
+            });
+            $("#navTop")
+        })
+    </script>
+    <style>
+        .section {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .section.page1 { background-image: url(images/bg1.jpg); }
+        .section.page2 { background-image: url(images/bg2.jpg); }
+        .section.page3 { background-image: url(images/bg3.jpg); }
+        .section.page4 { background-image: url(images/bg4.jpg); }
+        #fp-nav.right { right: 10px; }
+        .fp-tooltip.right { right: 20px; }
+        #fp-nav ul li a span, .fp-slidesNav ul li a span { background: #961938; }
+        p {
+          position:fixed;
+          background: #21a3bf;
+          z-index:1; width: 90%;
+          left: 50%; top: 50%; transform:translate(-50%);
+          text-align: center;
+        }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="navTop">
+    <a class="navbar-brand" href="#">LOGO</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav topMenu ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#m1st">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#m2st">Product</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#m3st">Community</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#m4st">Board</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quidem.</p>
+    <div id="fullpage">
+        <div class="section page1" data-anchor="m1st">1</div>
+        <div class="section page2" data-anchor="m2st">2</div>
+        <div class="section page3" data-anchor="m3st">3</div>
+        <div class="section page4" data-anchor="m4st">4</div>
+    </div>
+</body>
+</html>
